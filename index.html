@@ -26,8 +26,6 @@
     } else {
       var mobile_system = '';
     }
-
-    // using context
     
 
   </script>
@@ -39,7 +37,7 @@
   <!-- your scripts here -->
   <script>
       $(document).ready(function(){
-      getMapLocation()
+     getDefaultLocation();
       });
   </script>
   <script src="js/app/app.js"></script>
@@ -87,7 +85,7 @@
           </div>
         </div>
         <!-- sidebar ends -->
-      
+      <div id="map"></div>
     	</div><!-- /content -->
 
     </div><!-- /page -->

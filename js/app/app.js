@@ -13,37 +13,23 @@ function onDeviceReady() {
 
 // // onSuccess Geolocation
 // //
-// function onSuccess(position) {
+function onSuccess(position) {
 
-//     var element = document.getElementById('geolocation');
-//     element.innerHTML = 'Latitude: ' + position.coords.latitude  + '<br />' +
-//         'Longitude: '          + position.coords.longitude             + '<br />' +
-//         'Altitude: '           + position.coords.altitude              + '<br />' +
-//         'Accuracy: '           + position.coords.accuracy              + '<br />' +
-//         'Altitude Accuracy: '  + position.coords.altitudeAccuracy      + '<br />' +
-//         'Heading: '            + position.coords.heading               + '<br />' +
-//         'Speed: '              + position.coords.speed                 + '<br />' +
-//         'Timestamp: '          + position.timestamp          + '<br />';
-// }
-
-// // onError Callback receives a PositionError object
-// //
-// function onError(error) {
-//     if (error.code==1)
-//         {
-//             alert("Please turn on your location service on your phone before you can enjoy the service");
-//         }
-//         else
-//         {
-//             alert('code: '    + error.code    + '\n' +
-//             'message: ' + error.message + '\n');    
-//         }
-    
-// }
+    map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 6})
+};
 
 
-var Latitude = undefined;
-var Longitude = undefined;
+
+var Latitude = -3.363;
+var Longitude = 131.044;
+
+function getDefaultLocation() {
+
+    navigator.geolocation.getCurrentPosition
+    (onSuccess);
+}
 
 // Get geo coordinates
 
